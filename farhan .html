@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aweis — Wooden Chess Boards & Crafts</title>
+  <meta name="description" content="Handmade wooden chess boards and crafts by Aweis Khan — premium finish, custom designs, worldwide shipping.">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fff; --muted:#6b6b6b; --accent:#c67c3d;
+      --maxw:1100px;
+      font-family: 'Inter', sans-serif;
+    }
+    body{ margin:0; background:var(--bg); color:#111; line-height:1.5; }
+    h1,h2,h3{ font-family:'Playfair Display', serif; margin:0 0 10px; }
+
+    /* Navbar */
+    .site-header { padding:20px; max-width:var(--maxw); margin:0 auto; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .logo { font-size:1.4rem; text-decoration:none; color:#111; font-weight:700; }
+    .nav-links { list-style:none; display:flex; gap:18px; margin:0; padding:0; }
+    .nav-links a{ text-decoration:none; color:var(--muted); }
+    .cta{ background:var(--accent); color:#fff; padding:8px 12px; border-radius:8px; text-decoration:none; }
+
+    /* Hero */
+    .hero{ display:flex; gap:30px; align-items:center; margin-top:30px; padding:20px 0; }
+    .hero-left{ flex:1; }
+    .hero-left h1{ font-size:2rem; }
+    .hero-buttons{ display:flex; gap:12px; margin-top:12px; }
+    .btn{ background:var(--accent); color:#fff; padding:10px 16px; border-radius:8px; text-decoration:none; display:inline-block; }
+    .btn.ghost{ background:transparent; border:1px solid #ddd; color:#111; }
+    .hero-right{ width:360px; }
+    .hero-card{ border-radius:16px; padding:12px; box-shadow:0 8px 24px rgba(0,0,0,0.08); background:#fff; }
+    .hero-card img{ width:100%; border-radius:10px; display:block; }
+
+    /* Products */
+    .products{ max-width:var(--maxw); margin:40px auto; padding:20px; }
+    .product-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; }
+    .product-card{ border-radius:12px; padding:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06); background:#fff;}
+    .product-card img{ width:100%; border-radius:8px; }
+    .card-actions{ display:flex; gap:8px; margin-top:8px; }
+
+    /* Testimonials */
+    .testimonials{ max-width:var(--maxw); margin:40px auto; padding:20px; }
+    blockquote{ background:#fff; padding:14px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.05); margin:12px 0;}
+    cite{ display:block; margin-top:8px; color:var(--muted); font-size:0.9rem;}
+
+    /* Contact */
+    #contact{ padding:30px 0; background:#fafafa; }
+    #contact form input, #contact form textarea{ width:100%; margin:8px 0; padding:8px; border:1px solid #ccc; border-radius:6px; }
+    #contact form button{ border:none; cursor:pointer; }
+
+    /* Footer */
+    footer{ padding:20px 0; background:#f4f4f4; text-align:center; }
+
+    /* Marquee */
+    .marquee-wrap{ overflow:hidden; width:100%; background:#111; padding:8px 0; }
+    .marquee{ display:flex; gap:14px; animation:slide 12s linear infinite; align-items:center; }
+    .marquee img{ height:60px; opacity:0.95; }
+    @keyframes slide{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
+
+    /* Modal */
+    .modal{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.45); padding:20px; }
+    .modal-content{ background:#fff; padding:18px; border-radius:12px; max-width:520px; width:100%; position:relative;}
+    .close{ position:absolute; right:12px; top:8px; cursor:pointer; font-size:20px;}
+    @media (max-width:900px){
+      .hero{ flex-direction:column-reverse; }
+      .hero-right{ width:100%; }
+      .nav-links{ display:none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#">AWEIS</a>
+      <ul class="nav-links">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="cta" href="#contact">Order Now</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Handmade Wooden Chess Boards</h1>
+        <p>Premium finish • Custom sizes • Worldwide shipping</p>
+        <div class="hero-buttons">
+          <a class="btn" href="#products">See Collection</a>
+          <a class="btn ghost" href="#about">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <img src="assets/chess-board-hero.jpg" alt="Wooden Chess Board">
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- Marquee -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee">
+      <img src="assets/marquee-board.png" alt="chess pattern">
+      <img src="assets/marquee-board.png" alt="chess pattern">
+    </div>
+  </div>
+
+  <!-- Products -->
+  <section id="products" class="products">
+    <h2>Our Bestsellers</h2>
+    <div class="product-grid">
+      <article class="product-card">
+        <img src="assets/board1.jpg" alt="Vinyl Printed Chess Board">
+        <h3>Vinyl-Printed Wooden Chess Board</h3>
+        <p>Size: 18x18 inch • Finish: Matte • Ships worldwide</p>
+        <div class="card-actions">
+          <button class="btn" onclick="openModal('Vinyl-Printed Wooden Chess Board','assets/board1.jpg')">Quick View</button>
+          <a class="btn ghost" href="https://www.amazon.in/" target="_blank">Buy</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="reviews" class="testimonials">
+    <h2>What Customers Say</h2>
+    <blockquote>“Beautiful finish and fast shipping — 5/5!” <cite>- Fatima</cite></blockquote>
+    <blockquote>“Perfect for weddings — ordered 10 boards.” <cite>- Raj</cite></blockquote>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div style="max-width:800px;margin:0 auto;">
+      <h2>Contact / Order</h2>
+      <p>Call or WhatsApp: <a href="https://wa.me/918239148245" target="_blank">+91 82391 48245</a></p>
+      <form action="mailto:khanaweis676@gmail.com" method="post" enctype="text/plain">
+        <input name="name" placeholder="Your name" required>
+        <input name="email" placeholder="Your email">
+        <textarea name="message" placeholder="Order details (size, quantity)"></textarea>
+        <button class="btn" type="submit">Send Order Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <strong>Aweis</strong> — Handmade wooden crafts. Follow: 
+      <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a> • 
+      <a href="https://www.facebook.com/yourpage" target="_blank">Facebook</a>
+    </p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="quickModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <img id="modalImg" src="" alt="" style="width:100%;max-width:400px;border-radius:8px;">
+      <h3 id="modalTitle"></h3>
+      <p>Custom sizes available. Contact to order bulk.</p>
+      <a id="modalBuy" class="btn" href="#contact" target="_blank">Order Now</a>
+    </div>
+  </div>
+
+  <script>
+    function openModal(title, imgSrc){
+      document.getElementById('modalImg').src = imgSrc;
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('quickModal').style.display = 'flex';
+    }
+    function closeModal(){ document.getElementById('quickModal').style.display = 'none'; }
+    window.onclick = function(e){ if(e.target == document.getElementById('quickModal')) closeModal(); }
+  </script>
+
+</body>
+</html>
